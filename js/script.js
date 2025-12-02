@@ -17,7 +17,7 @@ for (let i = 1; i <= 100; i++) {
         output += `<li class="yellow"> ${number} </li>`;
     }else {
         number = i;
-        output += `<li class="black"> ${number} </li>`;
+        output += `<li> ${number} </li>`;
     }
     console.log(number)
 }
