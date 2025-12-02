@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+
+}
+body{ 
+    background-color: skyblue;
+}
+li {
+    list-style-type:none;
+}
+.yellow {
+    color: yellow;
+}
+.green {
+    color: green;
+}
+.blue {
+    color: blue;
+}

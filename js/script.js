@@ -1,29 +1,25 @@
 // FizzBuzz
 //Fin quando non arrivo a 100 scrivo i numeri uno alla volta incrementandoli di uno
-let fizz = "";
-let buzz = "";
-let print = "";
-let bool = false;
+let number;
+const print = document.getElementById("number");
 for (let i = 1; i <= 100; i++) {
-    // se il numero è divisibile per 3 salvo valore fizz e imposto bool vera
-    if ( i % 3 === 0 ) {
-        fizz = "Fizz";
-        bool = true;
+    // se il numero è divisibile per 3 e allo stesso tempo è divisibile per 5 allora scrivo fizzbuzz al posto del numero
+    
+    if ( i % 3 === 0 && i % 5 === 0) {
+        number = "FizzBuzz";
+        print.innerHTML += `<li class="green"> ${number} <li>`;
+    }else if( i % 5 === 0 ){// se il numero è divisibile per 5 scrivo il buzz al posto del numero( ma non deve essere divisibile per 3 anche)
+        number = "Buzz";
+        print.innerHTML += `<li class="blue"> ${number} <li>`;
+    }else if( i % 3 === 0 ){// se il numero è divisibile per 3 scrivo fizz al posto del numero( ma non deve essere divisibile per 5 anche)
+        number = "Fizz";
+        print.innerHTML += `<li class="yellow"> ${number} <li>`;
+    }else {
+        number = i;
+        print.innerHTML += `<li class="black"> ${number} <li>`;
     }
-    if( i % 5 === 0 ){// se il numero è divisibile per 5 salvo valore buzz imposto bool vera
-        buzz = "Buzz";
-        bool = true;
-    } 
-    if( bool !== true ){// se bool è falsa e quindi il numero non è divisibile nè per 3 e nè per 5 allora salvo valore uguale al contatore
-        print = i;
-    }
-    console.log(`${print}${fizz}${buzz}`)// stampo i valori concatenati ( se non sono stati salvati valori  non stamperò niente)
-    //resetto i valori
-    print = "";
-    fizz = "";
-    buzz = "";
-    bool = false;
+    console.log(number)
 }
   
   
-  // se il numero è divisibile per 3 e allo stesso tempo è divisibile per 5 allora scrivo fizzbuzz al posto del numero
+  
