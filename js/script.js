@@ -3,14 +3,14 @@
 let alternative;
 for (let i = 1; i <= 100; i++) {
     // se il numero è divisibile per 3 scrivo fizz al posto del numero( ma non deve essere divisibile per 5 anche)
-    if ( i % 3 === 0 && i % 5 !== 0 ) {
-        alternative = "Fizz";
+    if ( i % 3 === 0 && i % 5 === 0) {
+        alternative = "FizzBuzz";
         console.log(alternative);
-    }else if( i % 5 === 0 && i % 3 !== 0 ){// se il numero è divisibile per 5 scrivo il buzz al posto del numero( ma non deve essere divisibile per 3 anche)
+    }else if( i % 5 === 0 ){// se il numero è divisibile per 5 scrivo il buzz al posto del numero( ma non deve essere divisibile per 3 anche)
         alternative = "Buzz";
         console.log(alternative);
-    }else if( i % 3 === 0 && i % 5 === 0){
-        alternative = "BuzzFizz";
+    }else if( i % 3 === 0 ){
+        alternative = "Fizz";
         console.log(alternative);
     }else {
         console.log(i)
